@@ -22,12 +22,21 @@ var BetterHighlightDirective = /** @class */ (function () {
     BetterHighlightDirective.prototype.mouseleave = function (eventData) {
         this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'transparent');
     };
+    BetterHighlightDirective.prototype.mouseclick = function (eventData) {
+        this.backgroundColor = 'Yellow';
+    };
+    __decorate([
+        core_1.HostBinding('style.backgroundColor')
+    ], BetterHighlightDirective.prototype, "backgroundColor");
     __decorate([
         core_1.HostListener('mouseenter')
     ], BetterHighlightDirective.prototype, "mouseover");
     __decorate([
         core_1.HostListener('mouseleave')
     ], BetterHighlightDirective.prototype, "mouseleave");
+    __decorate([
+        core_1.HostListener('click')
+    ], BetterHighlightDirective.prototype, "mouseclick");
     BetterHighlightDirective = __decorate([
         core_1.Directive({
             selector: '[appBetterHighlight]'
