@@ -10,6 +10,8 @@ import { RecipeDetailComponent } from './recipes/recipe-detail/recipe-detail.com
 import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
+import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
+import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
 @NgModule({
   declarations: [
   AppComponent,
@@ -20,6 +22,8 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
   ShoppingListComponent,
   ShoppingEditComponent,
   RecipeItemComponent,
+  BasicHighlightDirective,
+  BetterHighlightDirective,
   ],
   imports: [
     BrowserModule,
