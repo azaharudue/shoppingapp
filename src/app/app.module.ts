@@ -12,6 +12,7 @@ import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-ed
 import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-item.component';
 import { BasicHighlightDirective } from './directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './directives/better-highlight/better-highlight.directive';
+import { UnlessDirective } from './directives/unless.directive';
 @NgModule({
   declarations: [
   AppComponent,
@@ -24,6 +25,7 @@ import { BetterHighlightDirective } from './directives/better-highlight/better-h
   RecipeItemComponent,
   BasicHighlightDirective,
   BetterHighlightDirective,
+  UnlessDirective
   ],
   imports: [
     BrowserModule,
