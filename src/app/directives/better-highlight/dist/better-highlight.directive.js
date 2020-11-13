@@ -16,6 +16,18 @@ var BetterHighlightDirective = /** @class */ (function () {
     BetterHighlightDirective.prototype.ngOnInit = function () {
         this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
     };
+    BetterHighlightDirective.prototype.mouseover = function (eventData) {
+        this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
+    };
+    BetterHighlightDirective.prototype.mouseleave = function (eventData) {
+        this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'transparent');
+    };
+    __decorate([
+        core_1.HostListener('mouseenter')
+    ], BetterHighlightDirective.prototype, "mouseover");
+    __decorate([
+        core_1.HostListener('mouseleave')
+    ], BetterHighlightDirective.prototype, "mouseleave");
     BetterHighlightDirective = __decorate([
         core_1.Directive({
             selector: '[appBetterHighlight]'
