@@ -9,8 +9,13 @@ exports.__esModule = true;
 exports.BetterHighlightDirective = void 0;
 var core_1 = require("@angular/core");
 var BetterHighlightDirective = /** @class */ (function () {
-    function BetterHighlightDirective() {
+    function BetterHighlightDirective(elementRef, renderer) {
+        this.elementRef = elementRef;
+        this.renderer = renderer;
     }
+    BetterHighlightDirective.prototype.ngOnInit = function () {
+        this.renderer.setStyle(this.elementRef.nativeElement, 'background-color', 'blue');
+    };
     BetterHighlightDirective = __decorate([
         core_1.Directive({
             selector: '[appBetterHighlight]'
