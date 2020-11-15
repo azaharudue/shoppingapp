@@ -13,6 +13,7 @@ import { RecipeItemComponent } from './recipes/recipe-list/recipe-item/recipe-it
 import { BasicHighlightDirective } from './shared/directives/basic-highlight/basic-highlight.directive';
 import { BetterHighlightDirective } from './shared/directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './shared/directives/unless.directive';
+import { DropdownDirective } from './shared/directives/dropdown.directive';
 @NgModule({
   declarations: [
   AppComponent,
@@ -25,7 +26,8 @@ import { UnlessDirective } from './shared/directives/unless.directive';
   RecipeItemComponent,
   BasicHighlightDirective,
   BetterHighlightDirective,
-  UnlessDirective
+  UnlessDirective,
+  DropdownDirective
   ],
   imports: [
     BrowserModule,

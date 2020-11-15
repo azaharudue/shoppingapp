@@ -22,6 +22,7 @@ var recipe_item_component_1 = require("./recipes/recipe-list/recipe-item/recipe-
 var basic_highlight_directive_1 = require("./shared/directives/basic-highlight/basic-highlight.directive");
 var better_highlight_directive_1 = require("./shared/directives/better-highlight/better-highlight.directive");
 var unless_directive_1 = require("./shared/directives/unless.directive");
+var dropdown_directive_1 = require("./shared/directives/dropdown.directive");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -38,7 +39,8 @@ var AppModule = /** @class */ (function () {
                 recipe_item_component_1.RecipeItemComponent,
                 basic_highlight_directive_1.BasicHighlightDirective,
                 better_highlight_directive_1.BetterHighlightDirective,
-                unless_directive_1.UnlessDirective
+                unless_directive_1.UnlessDirective,
+                dropdown_directive_1.DropdownDirective
             ],
             imports: [
                 platform_browser_1.BrowserModule,
