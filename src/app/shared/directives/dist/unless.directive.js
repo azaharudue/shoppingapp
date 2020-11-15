@@ -17,7 +17,6 @@ var UnlessDirective = /** @class */ (function () {
         set: function (condition) {
             if (!condition) {
                 this.vcRef.createEmbeddedView(this.templateRef);
-                ;
             }
             else {
                 this.vcRef.clear();

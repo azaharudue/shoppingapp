@@ -14,6 +14,7 @@ import { BasicHighlightDirective } from './shared/directives/basic-highlight/bas
 import { BetterHighlightDirective } from './shared/directives/better-highlight/better-highlight.directive';
 import { UnlessDirective } from './shared/directives/unless.directive';
 import { DropdownDirective } from './shared/directives/dropdown.directive';
+import { DropdownnewDirective } from './shared/directives/dropdownnew.directive';
 @NgModule({
   declarations: [
   AppComponent,
@@ -27,7 +28,8 @@ import { DropdownDirective } from './shared/directives/dropdown.directive';
   BasicHighlightDirective,
   BetterHighlightDirective,
   UnlessDirective,
-  DropdownDirective
+  DropdownDirective,
+  DropdownnewDirective
   ],
   imports: [
     BrowserModule,

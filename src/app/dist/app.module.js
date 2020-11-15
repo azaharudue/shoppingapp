@@ -23,6 +23,7 @@ var basic_highlight_directive_1 = require("./shared/directives/basic-highlight/b
 var better_highlight_directive_1 = require("./shared/directives/better-highlight/better-highlight.directive");
 var unless_directive_1 = require("./shared/directives/unless.directive");
 var dropdown_directive_1 = require("./shared/directives/dropdown.directive");
+var dropdownnew_directive_1 = require("./shared/directives/dropdownnew.directive");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -40,7 +41,8 @@ var AppModule = /** @class */ (function () {
                 basic_highlight_directive_1.BasicHighlightDirective,
                 better_highlight_directive_1.BetterHighlightDirective,
                 unless_directive_1.UnlessDirective,
-                dropdown_directive_1.DropdownDirective
+                dropdown_directive_1.DropdownDirective,
+                dropdownnew_directive_1.DropdownnewDirective
             ],
             imports: [
                 platform_browser_1.BrowserModule,
