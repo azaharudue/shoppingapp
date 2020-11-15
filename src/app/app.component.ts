@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
    tab = 'recipe';
-   hidden = true;
+   hidden = false;
   onNavigate(otherTab: string): void {
     if (this.tab === 'recipe'){ this.tab = otherTab; }
     else {this.tab = otherTab; }
