@@ -8,7 +8,6 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.AppComponent = void 0;
 var core_1 = require("@angular/core");
-var recipe_service_1 = require("./recipes/recipe.service");
 var AppComponent = /** @class */ (function () {
     function AppComponent() {
         this.tab = 'recipe';
@@ -26,8 +25,7 @@ var AppComponent = /** @class */ (function () {
         core_1.Component({
             selector: 'app-root',
             templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css'],
-            providers: [recipe_service_1.RecipeService]
+            styleUrls: ['./app.component.css']
         })
     ], AppComponent);
     return AppComponent;

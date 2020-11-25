@@ -17,7 +17,7 @@ var RecipesComponent = /** @class */ (function () {
         var _this = this;
         this.recipeService.recipeSelected
             .subscribe(function (recipe) {
-            _this.selectedrecipes = recipe;
+            _this.selectedRecipe = recipe;
         });
     };
     RecipesComponent = __decorate([

@@ -12,7 +12,9 @@ var RecipeItemComponent = /** @class */ (function () {
     function RecipeItemComponent(recipeService) {
         this.recipeService = recipeService;
     }
-    RecipeItemComponent.prototype.onClickDetails = function () {
+    RecipeItemComponent.prototype.ngOnInit = function () {
+    };
+    RecipeItemComponent.prototype.onSelected = function () {
         this.recipeService.recipeSelected.emit(this.recipe);
     };
     __decorate([
