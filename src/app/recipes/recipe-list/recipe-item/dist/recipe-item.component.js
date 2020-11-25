@@ -6,21 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.RecipeDetailComponent = void 0;
+exports.RecipeItemComponent = void 0;
 var core_1 = require("@angular/core");
-var RecipeDetailComponent = /** @class */ (function () {
-    function RecipeDetailComponent() {
+var RecipeItemComponent = /** @class */ (function () {
+    function RecipeItemComponent(recipeService) {
+        this.recipeService = recipeService;
     }
+    RecipeItemComponent.prototype.onClickDetails = function () {
+        this.recipeService.recipeSelected.emit(this.recipe);
+    };
     __decorate([
         core_1.Input()
-    ], RecipeDetailComponent.prototype, "recipe");
-    RecipeDetailComponent = __decorate([
+    ], RecipeItemComponent.prototype, "recipe");
+    RecipeItemComponent = __decorate([
         core_1.Component({
-            selector: 'app-recipe-detail',
-            templateUrl: './recipe-detail.component.html',
-            styleUrls: ['./recipe-detail.component.css']
+            selector: 'app-recipe-item',
+            templateUrl: './recipe-item.component.html',
+            styleUrls: ['./recipe-item.component.css']
         })
-    ], RecipeDetailComponent);
-    return RecipeDetailComponent;
+    ], RecipeItemComponent);
+    return RecipeItemComponent;
 }());
-exports.RecipeDetailComponent = RecipeDetailComponent;
+exports.RecipeItemComponent = RecipeItemComponent;

@@ -6,30 +6,28 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 exports.__esModule = true;
-exports.AppComponent = void 0;
+exports.RecipesComponent = void 0;
 var core_1 = require("@angular/core");
-var recipe_service_1 = require("./recipes/recipe.service");
-var AppComponent = /** @class */ (function () {
-    function AppComponent() {
-        this.tab = 'recipe';
-        this.hidden = false;
+var recipe_service_1 = require("./recipe.service");
+var RecipesComponent = /** @class */ (function () {
+    function RecipesComponent(recipeService) {
+        this.recipeService = recipeService;
     }
-    AppComponent.prototype.onNavigate = function (otherTab) {
-        if (this.tab === 'recipe') {
-            this.tab = otherTab;
-        }
-        else {
-            this.tab = otherTab;
-        }
+    RecipesComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.recipeService.recipeSelected
+            .subscribe(function (recipe) {
+            _this.selectedrecipes = recipe;
+        });
     };
-    AppComponent = __decorate([
+    RecipesComponent = __decorate([
         core_1.Component({
-            selector: 'app-root',
-            templateUrl: './app.component.html',
-            styleUrls: ['./app.component.css'],
+            selector: 'app-recipes',
+            templateUrl: './recipes.component.html',
+            styleUrls: ['./recipes.component.css'],
             providers: [recipe_service_1.RecipeService]
         })
-    ], AppComponent);
-    return AppComponent;
+    ], RecipesComponent);
+    return RecipesComponent;
 }());
-exports.AppComponent = AppComponent;
+exports.RecipesComponent = RecipesComponent;
