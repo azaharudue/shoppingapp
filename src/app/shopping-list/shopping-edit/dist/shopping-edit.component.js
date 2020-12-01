@@ -8,28 +8,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.ShoppingEditComponent = void 0;
 var core_1 = require("@angular/core");
-var ingredient_model_1 = require("src/app/shared/ingredient.model");
+var ingredient_model_1 = require("../../shared/ingredient.model");
 var ShoppingEditComponent = /** @class */ (function () {
-    function ShoppingEditComponent() {
-        this.ingredientEvent = new core_1.EventEmitter();
+    function ShoppingEditComponent(slService) {
+        this.slService = slService;
     }
     ShoppingEditComponent.prototype.ngOnInit = function () {
     };
-    ShoppingEditComponent.prototype.onClickAdd = function () {
-        var newName = this.inputName.nativeElement.value;
-        var newAmount = this.inputAmount.nativeElement.value;
-        var newIngredient = new ingredient_model_1.Ingredient(newName, newAmount);
-        this.ingredientEvent.emit(newIngredient);
+    ShoppingEditComponent.prototype.onAddItem = function () {
+        var ingName = this.nameInputRef.nativeElement.value;
+        var ingAmount = this.amountInputRef.nativeElement.value;
+        var newIngredient = new ingredient_model_1.Ingredient(ingName, ingAmount);
+        this.slService.addIngredients(newIngredient);
     };
     __decorate([
-        core_1.Output()
-    ], ShoppingEditComponent.prototype, "ingredientEvent");
+        core_1.ViewChild('nameInput', { static: false })
+    ], ShoppingEditComponent.prototype, "nameInputRef");
     __decorate([
-        core_1.ViewChild('inputName', { static: false })
-    ], ShoppingEditComponent.prototype, "inputName");
-    __decorate([
-        core_1.ViewChild('inputAmount', { static: false })
-    ], ShoppingEditComponent.prototype, "inputAmount");
+        core_1.ViewChild('amountInput', { static: false })
+    ], ShoppingEditComponent.prototype, "amountInputRef");
     ShoppingEditComponent = __decorate([
         core_1.Component({
             selector: 'app-shopping-edit',

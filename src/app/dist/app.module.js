@@ -9,21 +9,17 @@ exports.__esModule = true;
 exports.AppModule = void 0;
 var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
-var app_component_1 = require("./app.component");
-var header_component_1 = require("../app/header/header.component");
 var forms_1 = require("@angular/forms");
-var http_1 = require("@angular/common/http");
+var app_component_1 = require("./app.component");
+var header_component_1 = require("./header/header.component");
 var recipes_component_1 = require("./recipes/recipes.component");
 var recipe_list_component_1 = require("./recipes/recipe-list/recipe-list.component");
 var recipe_detail_component_1 = require("./recipes/recipe-detail/recipe-detail.component");
+var recipe_item_component_1 = require("./recipes/recipe-list/recipe-item/recipe-item.component");
 var shopping_list_component_1 = require("./shopping-list/shopping-list.component");
 var shopping_edit_component_1 = require("./shopping-list/shopping-edit/shopping-edit.component");
-var recipe_item_component_1 = require("./recipes/recipe-list/recipe-item/recipe-item.component");
-var basic_highlight_directive_1 = require("./shared/directives/basic-highlight/basic-highlight.directive");
-var better_highlight_directive_1 = require("./shared/directives/better-highlight/better-highlight.directive");
-var unless_directive_1 = require("./shared/directives/unless.directive");
-var dropdown_directive_1 = require("./shared/directives/dropdown.directive");
-var dropdownnew_directive_1 = require("./shared/directives/dropdownnew.directive");
+var dropdown_directive_1 = require("./shared/dropdown.directive");
+var shoppingList_service_1 = require("./shopping-list/shoppingList.service");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -35,21 +31,16 @@ var AppModule = /** @class */ (function () {
                 recipes_component_1.RecipesComponent,
                 recipe_list_component_1.RecipeListComponent,
                 recipe_detail_component_1.RecipeDetailComponent,
+                recipe_item_component_1.RecipeItemComponent,
                 shopping_list_component_1.ShoppingListComponent,
                 shopping_edit_component_1.ShoppingEditComponent,
-                recipe_item_component_1.RecipeItemComponent,
-                basic_highlight_directive_1.BasicHighlightDirective,
-                better_highlight_directive_1.BetterHighlightDirective,
-                unless_directive_1.UnlessDirective,
-                dropdown_directive_1.DropdownDirective,
-                dropdownnew_directive_1.DropdownnewDirective
+                dropdown_directive_1.DropdownDirective
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
-                http_1.HttpClientModule,
             ],
-            providers: [],
+            providers: [shoppingList_service_1.ShoppinglistService],
             bootstrap: [app_component_1.AppComponent]
         })
     ], AppModule);

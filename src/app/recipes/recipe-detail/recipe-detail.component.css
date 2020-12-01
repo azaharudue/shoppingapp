@@ -1,8 +1,10 @@
-img{
-    border: 4px;
-    border-radius: 20px;
-    border-style: double;
-    border-color: gray;
-    max-height: 300px;
-    max-width: fit-content;
+img{  max-height: 300px;
+      border-radius: 20px;
+      border-color: darkgrey;
+      border-style: double;
+      border-width: 2px;
+
+}
+addToBucket{
+      cursor: pointer;
 }
