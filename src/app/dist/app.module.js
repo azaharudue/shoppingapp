@@ -19,8 +19,11 @@ var recipe_detail_component_1 = require("./recipes/recipe-detail/recipe-detail.c
 var shopping_list_component_1 = require("./shopping-list/shopping-list.component");
 var shopping_edit_component_1 = require("./shopping-list/shopping-edit/shopping-edit.component");
 var recipe_item_component_1 = require("./recipes/recipe-list/recipe-item/recipe-item.component");
-var basic_highlight_directive_1 = require("./directives/basic-highlight/basic-highlight.directive");
-var better_highlight_directive_1 = require("./directives/better-highlight/better-highlight.directive");
+var basic_highlight_directive_1 = require("./shared/directives/basic-highlight/basic-highlight.directive");
+var better_highlight_directive_1 = require("./shared/directives/better-highlight/better-highlight.directive");
+var unless_directive_1 = require("./shared/directives/unless.directive");
+var dropdown_directive_1 = require("./shared/directives/dropdown.directive");
+var dropdownnew_directive_1 = require("./shared/directives/dropdownnew.directive");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -37,6 +40,9 @@ var AppModule = /** @class */ (function () {
                 recipe_item_component_1.RecipeItemComponent,
                 basic_highlight_directive_1.BasicHighlightDirective,
                 better_highlight_directive_1.BetterHighlightDirective,
+                unless_directive_1.UnlessDirective,
+                dropdown_directive_1.DropdownDirective,
+                dropdownnew_directive_1.DropdownnewDirective
             ],
             imports: [
                 platform_browser_1.BrowserModule,

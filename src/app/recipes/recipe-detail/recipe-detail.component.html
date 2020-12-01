@@ -11,7 +11,7 @@
 </div>
 <div class="row">
     <div class="col-xs-12">
-        <div class="btn-group">
+        <div appDropdown class="btn-group">
             <button type="button"
              class = "btn btn-primary dropdown-toggle" > Manage Recipe <span class="caret"></span>
             </button>
@@ -25,6 +25,12 @@
     <div class="row">
         <div class="col-xs-12">
             {{recipe.description}}
+        </div>
+        <div class="col-xs-6" [ngSwitch] = "NumOfIngredients">
+        <p *ngSwitchCase = "10"> Number of Ingredients are 10</p>
+        <p *ngSwitchCase = "5"> Number of Ingredients are 5</p>
+
+
         </div>
     </div>
     <div class="row">
