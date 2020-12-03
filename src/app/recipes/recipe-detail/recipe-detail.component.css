@@ -8,3 +8,6 @@ img{  max-height: 300px;
 addToBucket{
       cursor: pointer;
 }
+.dropdown-menu{
+      cursor: pointer;
+}
