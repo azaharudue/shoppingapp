@@ -6,7 +6,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { ActivatedRoute, Params } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
 
@@ -20,6 +20,7 @@ export class RecipeEditComponent implements OnInit {
   editMode = false;
   recipeForm: FormGroup;
   constructor(
+    private router: Router,
     private activatedRoute: ActivatedRoute,
     private recipeService: RecipeService
   ) {}
@@ -44,6 +45,7 @@ export class RecipeEditComponent implements OnInit {
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
+    this.onCancel();
   }
   private initForm(): void {
     let recipeName = '';
@@ -89,5 +91,8 @@ export class RecipeEditComponent implements OnInit {
         ]),
       })
     );
+  }
+  onCancel(): void {
+    this.router.navigate(['../'], { relativeTo: this.activatedRoute });
   }
 }
